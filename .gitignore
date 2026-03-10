@@ -3,7 +3,7 @@ server/firebaseConfig.json
 .env
 
 # big files
-*.mp4
+document/で座高_最終提出動画.mp4
 
 # React
 node_modules/
