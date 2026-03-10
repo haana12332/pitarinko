@@ -1,0 +1,16 @@
+# secrets
+server/firebaseConfig.json
+.env
+
+# big files
+*.mp4
+
+# React
+node_modules/
+build/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# OS
+.DS_Store
