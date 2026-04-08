@@ -1,0 +1,233 @@
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+body,
+html {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+#root {
+  width: 100%;
+  height: 100vh;
+}
+.flex {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Sidebar styles */
+#Sidebar {
+  width: 6.67%; /* 画面の1/15の幅 */
+  background-color: #d9d9d9;
+  height: 100vh;
+}
+
+#Sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#Sidebar li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Button styles */
+.btn.sidebar {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  font-size: 3.5vw; /* Adjusted for better scaling */
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.7);
+  transition: background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease; /* Unified transition */
+}
+
+/* Hover effect for button */
+.btn.sidebar:hover {
+  color: #51627d; /* Change to this color on hover */
+}
+/* ボタンがアクティブなとき（クリックされたとき）のスタイル */
+.btn.sidebar.display {
+  color: #51627d; /* クリック時の背景色 */
+  transition: background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease; /* Unified transition */
+}
+
+/* Icon and title styles */
+.btn.sidebar div {
+  margin-top: 3px; /* Space between icon and title */
+}
+
+.btn.sidebar p {
+  margin: 0;
+  font-size: 6px; /* Adjusted font size */
+  margin-bottom: 3px;
+} /* Map container and input styles */
+
+.map-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* 画面の高さ全体を使う */
+  flex-grow: 1; /* 残りのスペースを埋める */
+  flex-basis: 0; /* 初期幅を0にすることで、確実に残りのスペースを埋める */
+}
+
+.map-input {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1; /* z-indexを高く設定し、マップよりも前面に表示 */
+  padding: 8px;
+  font-size: 16px;
+  width: 300px;
+  border: 1px solid rgba(255, 255, 255, 0.5); /* 半透明の白い枠線 */
+  border-radius: 4px;
+  backdrop-filter: blur(10px); /* 背景をぼかす効果 */
+  color: black; /* テキストの色 */
+}
+.black-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999; /* Ensure it's in front of other elements */
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+}
+.map-input::placeholder {
+  color: rgba(0, 0, 0, 0.5); /* プレースホルダーテキストの色を薄くする */
+}
+
+/* 検索結果を入力ボックスの下に表示 */
+.shop-results {
+  position: absolute;
+  top: 45px; /* map-inputの下に表示するため、適切な距離を調整 */
+  left: 10px;
+  z-index: 9; /* map-inputよりも後ろに表示 */
+  background-color: rgba(255, 255, 255, 0.9); /* 背景を半透明にする */
+  padding: 10px;
+  border-radius: 4px;
+  width: 300px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2); /* 軽い影を追加 */
+}
+
+.shop-result-item {
+  margin-bottom: 10px;
+}
+.shop-result-item:hover {
+  color: #51627d;
+}
+.map-ref {
+  position: relative;
+  flex: 1;
+  height: calc(100vh - 100px);
+}
+.Rooting-container {
+  height: 100px; /* 必要に応じて高さを指定 */
+  background-color: lightblue; /* テスト用の背景色 */
+  transition: height 0.3s ease;
+}
+.mapingroot {
+  display: flex;
+  flex-direction: column; /* 縦方向に並べる */
+  width: 100%;
+  height: 100vh; /* 全画面の高さを指定 */
+}
+.none {
+  height: 0;
+}
+
+/* slidingPanel.css */
+.Sliding {
+  background-color: aqua;
+  width: 43.33%; /* 初期幅を300pxに指定 */
+  transition: width 0.3s ease; /* 幅が徐々に変化するように設定 */
+}
+
+.undisplay {
+  width: 0; /* 幅を100pxに縮める */
+  padding: 0;
+  display: none; /* 要素全体を非表示にする */
+}
+
+/* SearchPage */
+/* 縦スライド */
+.Search-container {
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+}
+
+/* 横スライド */
+.Shop-container {
+  display: flex; /* Flexboxを使用して子要素を横に並べる */
+  overflow-x: auto; /* 横スクロールを有効にする */
+  scroll-snap-type: x mandatory; /* 横方向のスナップを有効にする */
+  height: 100vh;
+  scroll-behavior: smooth; /* スクロールを滑らかにする */
+}
+.Shop-container::-webkit-scrollbar {
+  /* Chrome, Safari, Opera */
+  display: none;
+}
+.Search-container::-webkit-scrollbar {
+  /* Chrome, Safari, Opera */
+  display: none;
+}
+.area {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  scroll-behavior: smooth;
+  height: 100vh;
+  position: relative;
+}
+
+.shop_img {
+  flex: 0 0 100%; /* フレックスアイテムとして扱う */
+  height: 100vh;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover; /* 画像を全体にフィットさせる */
+  scroll-snap-align: start; /* スクロール時にこのアイテムの開始位置がビューポートの開始位置に合わせる */
+  scroll-snap-stop: always; /* スクロールがこのアイテムに到達したときに停止する */
+}
+
+.text-overlay {
+  position: absolute; /* 親要素内の絶対位置 */
+  bottom: 0; /* 親要素の一番下に配置 */
+  left: 0;
+  z-index: 3; /* 他の要素よりも前面に表示 */
+  padding: 200px 20px 20px 20px;
+
+  color: white;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0)
+  ); /* グラデーション */
+  width: 100%; /* 横幅全体をカバー */
+}
+.red {
+  background-color: red;
+  padding: 200px;
+}

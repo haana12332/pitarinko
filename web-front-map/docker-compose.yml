@@ -1,0 +1,11 @@
+services:
+  my-react-app:
+    build:
+      context: .
+    working_dir: /app
+    ports:
+      - "4500:4500"
+    volumes:
+      - ./my-react-app:/app
+      - /app/node_modules
+    command: npm run dev
