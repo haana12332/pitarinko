@@ -54,6 +54,6 @@
 ---
 ## 📺 Demo
 実際の動作の様子は、以下のデモ動画からご確認いただけます。
-**[Demo Video - Document/demo/demo_video.mp4]**
+**[Demo Video - Document/PITARINKO_DEMO.mp4]**
 
 
