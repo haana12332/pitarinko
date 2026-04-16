@@ -44,10 +44,10 @@
 
 | コンポーネント | 使用技術 | 役割 |
 | :--- | :--- | :--- |
-| **Edge Device** | **Sony Spresense** | [cite_start]GPS取得、モーター制御、カメラ画像認識 |
-| **Backend** | **Server (Node.js)** | [cite_start]GPS用・評価用サーバーをそれぞれ立て、送受信の仲介・頻度を制御  |
-| **Cloud** | **Firebase** | [cite_start]DB/ストレージ機能を用い、評価データと写真情報を保存 |
-| **Front-end** | **Web App** | [cite_start]地図ナビゲーションおよび、投稿写真の閲覧機能  |
+| **Edge Device** | **Sony Spresense** | GPS取得、モーター制御、カメラ画像認識 |
+| **Backend** | **Server (Node.js)** | GPS用・評価用サーバーをそれぞれ立て、送受信の仲介・頻度を制御  |
+| **Cloud** | **Firebase** | DB/ストレージ機能を用い、評価データと写真情報を保存 |
+| **Front-end** | **Web App** | 地図ナビゲーションおよび、投稿写真の閲覧機能  |
 
 ---
 
