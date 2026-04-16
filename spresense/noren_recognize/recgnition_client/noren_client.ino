@@ -81,17 +81,6 @@ void parse_httpresponse(char *message) {
     ConsolePrintf("Response : %s\r\n", p + 8);
   }
 }
-//ディスプレイに表示する関数
-// void showText(const char* text, uint16_t color, uint8_t size, int x, int y) {
-//   tft.fillScreen(ILI9341_BLACK);// 画面を黒で塗りつぶす
-
-//   // テキスト設定
-//   tft.setTextColor(color);
-//   tft.setTextSize(size);
-//   tft.setCursor(x, y);
-//   tft.println(text);
-// }
-
 void noren_setup(){
    File nnbfile = theSD.open("model.nnb");
 
