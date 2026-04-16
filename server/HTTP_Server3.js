@@ -1,7 +1,4 @@
-//---------------------------記録---------------------------
-// 2024/11/02
-// spresenseからお店の評価をServerで取得。そのデータをFirestoreのlikesに保存
-// shop_id=1で固定
+
 
 const http = require('http');
 const querystring = require('querystring');
