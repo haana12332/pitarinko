@@ -93,5 +93,5 @@
 * **チーム名**: で座高 
 
 ## 引用
-旅行先に求めるもの：https://prtimes.jp/main/html/rd/p/000000037.000135215.html
-Googleマップに掲載されている店舗情報の特に何を参考にしますか？：https://prtimes.jp/main/html/rd/p/000000112.000039683.html
+* 旅行先に求めるもの：https://prtimes.jp/main/html/rd/p/000000037.000135215.html
+* Googleマップに掲載されている店舗情報の特に何を参考にしますか？：https://prtimes.jp/main/html/rd/p/000000112.000039683.html
